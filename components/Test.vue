@@ -1,7 +1,7 @@
 <template>
-    <div>
-        {{message}}
-    </div>
+  <div>
+    {{ message }}
+  </div>
 </template>
 
 <script lang="ts">
@@ -18,9 +18,8 @@ export default class YourComponent extends Vue {
 
   message: string = 'This is a messageeeee'
 
-  get fullName (): string {
+  get fullName(): string {
     return `${this.user.firstName} ${this.user.lastName}`
   }
 }
-
 </script>

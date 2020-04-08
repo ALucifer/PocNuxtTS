@@ -1,3 +1,4 @@
 export default interface Marker {
-    coord?: Array<number>
+    lat?: number,
+    lng?: number
 }

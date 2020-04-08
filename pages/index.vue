@@ -6,17 +6,19 @@
       </div>
     </v-flex>
     <v-flex md6>
-      <div>test</div>
+      <AddMarker></AddMarker>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
 import Map from '~/components/Map.vue'
+import AddMarker from '~/components/AddMarker.vue'
 
 export default {
   components: {
-    Map
+    Map,
+    AddMarker
   },
   data() {
     return {

@@ -44,7 +44,8 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify',
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
+    'nuxt-typed-vuex'
   ],
   /*
    ** Nuxt.js modules
@@ -91,6 +92,7 @@ export default {
    ** Build configuration
    */
   build: {
+    transpile: [/typed-vuex/],
     /*
      ** You can extend webpack config here
      */

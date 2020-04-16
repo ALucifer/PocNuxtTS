@@ -6,4 +6,16 @@ export default class Marker {
     this.lat = lat
     this.lng = lng
   }
+
+  getLat(): number {
+    return this.lat
+  }
+
+  getLng(): number {
+    return this.lng
+  }
+
+  getCoord() {
+    return [this.lng, this.lat]
+  }
 }

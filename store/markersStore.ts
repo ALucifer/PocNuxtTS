@@ -1,26 +1,25 @@
-import { VuexModule, Module, Action, Mutation } from 'vuex-module-decorators'
+import { getterTree, mutationTree, actionTree } from 'nuxt-typed-vuex'
 import Marker from '~/types/marker'
 
-@Module({
-  name: 'markers',
-  namespaced: true,
-  stateFactory: true
+export const state = () => ({
+  markers: [] as Marker[]
 })
-export default class MarkersStore extends VuexModule {
-  markers: Marker[] = []
 
-  get allMarkers(): Marker[] {
-    return this.markers
-  }
+export const getters = getterTree(state, {
+  allMarkers: (state) => state.markers
+})
 
-  @Mutation
-  addMarkerMutation(marker: Marker) {
-    this.markers.push(marker)
+export const mutations = mutationTree(state, {
+  addMarker(state, marker: Marker) {
+    state.markers.push(marker)
   }
+})
 
-  @Action({ commit: 'addMarkerMutation' })
-  addMarkerAction() {
-    console.log('toto')
-    return true
+export const actions = actionTree(
+  { state, getters, mutations },
+  {
+    addMarkerAction({ commit }, marker: Marker) {
+      commit('addMarker', marker)
+    }
   }
-}
+)

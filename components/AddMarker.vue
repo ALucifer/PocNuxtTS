@@ -17,8 +17,8 @@ export default class AddMarker extends Vue {
 
   addMarker() {
     const marker = new Marker(this.lat, this.lng)
-    console.log(marker)
-    this.$store.commit('markers/addMarkerAction')
+    this.$accessor.markersStore.addMarkerAction(marker)
+    this.$root.$emit('new-marker', marker)
   }
 }
 </script>

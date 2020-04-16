@@ -1,11 +1,9 @@
 <template>
   <v-layout columns>
     <v-flex xs12 sm8 md6>
-      <div>
-        <Map></Map>
-      </div>
+      <Map></Map>
     </v-flex>
-    <v-flex md6>
+    <v-flex md6 class="px-4">
       <AddMarker></AddMarker>
     </v-flex>
   </v-layout>

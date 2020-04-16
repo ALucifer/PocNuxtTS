@@ -1,8 +1,8 @@
-import Vuex from 'vuex'
-import markersStore from '~/store/markersStore'
+import { getAccessorType } from 'nuxt-typed-vuex'
+import * as markersStore from '~/store/markersStore'
 
-const store = new Vuex.Store({
+export const accessorType = getAccessorType({
   modules: {
-    markers: markersStore
+    markersStore
   }
 })

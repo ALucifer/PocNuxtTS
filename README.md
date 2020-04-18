@@ -114,3 +114,18 @@ export default {
   }
 }
 ```
+## Architecture
+
+- **components** : Dossiers de tout les composants de l'application
+- **layouts** : Différent layouts de l'application (ex: layout du login, pour les admin, etc...)
+- **pages** : Chaque page est une route créé, chaque page est un regroupement de composant utile à cette page
+- **pluging** : todo
+- **static** : Dossier des fichiers static
+- **store** : Dossier de regroupement des modules vuex
+- **test** : Lieu où sont tout les tests unitaires/fonctionnel
+- **types** : Classes de l'application utilisé dans les multiples composant 
+
+## Annotations utilisé dans le projet
+- Nuxt-Typed-Vuex : https://nuxt-typed-vuex.danielcroe.com/#why-another-package
+- Vue class component : https://class-component.vuejs.org/
+- Vue property decorator : https://github.com/kaorun343/vue-property-decorator

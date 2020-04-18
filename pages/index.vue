@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      title: 'Welcome to the Vuetify + Nuxt.js template'
+      title: 'Welcome to the Vuetify + Nuxt.js templates.'
     }
   }
 }
